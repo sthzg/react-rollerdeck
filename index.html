@@ -1,0 +1,177 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="styles/demo.css" />
+    <script type="text/javascript">
+        var myRollerdeckData = {
+            pickerItems: [
+                {
+                    slug: {
+                        de: 'foobar',
+                        en: 'foobar'
+                    },
+                    title: {
+                        de: 'Foobar',
+                        en: 'Foobar'
+                    },
+                    imgSmall: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/251112/Favorites_020.png',
+                    imgBig: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/251112/Favorites_020.png',
+                    content: {
+                        left: {
+                            de: '<p class="spot-color">Foobar</p><p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics.</p><p><a href="#">Todo</a></p>',
+                            en: '<p class="spot-color">Foobar</p><p>The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog. Junk MTV quiz graced by fox whelps. Bawds jog, flick quartz, vex nymphs. Waltz, bad nymph, for quick jigs vex!</p><p><a href="#">Todo</a></p>'
+                        },
+                        right: {
+                            de: '<p class="spot-color">Specs</p><p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics.</p><p><a href="#">Todo</a></p>',
+                            en: '<p class="spot-color">Specs</p><p>The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog. Junk MTV quiz graced by fox whelps. Bawds jog, flick quartz, vex nymphs. Waltz, bad nymph, for quick jigs vex! Fox nymphs grab quick-jived waltz.</p><p><a href="#">Details</a></p>'
+                        }
+                    }
+                },
+                {
+                    slug: {
+                        de: 'bambaz',
+                        en: 'bambaz'
+                    },
+                    title: {
+                        de: 'Bambaz',
+                        en: 'Bambaz'
+                    },
+                    imgSmall: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/251112/Favorites_028.png',
+                    imgBig: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/251112/Favorites_028.png',
+                    content: {
+                        left: {
+                            de: '<p class="spot-color">Bambaz</p><p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics.</p><p><a href="#">Todo</a></p>',
+                            en: '<p class="spot-color">Bambaz</p><p>The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog. Junk MTV quiz graced by fox whelps. Bawds jog, flick quartz, vex nymphs. Waltz, bad nymph, for quick jigs vex!</p><p><a href="#">Todo</a></p>'
+                        },
+                        right: {
+                            de: '<p class="spot-color">Specs</p><p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics.</p><p><a href="#">Todo</a></p>',
+                            en: '<p class="spot-color">Specs</p><p>The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog. Junk MTV quiz graced by fox whelps. Bawds jog, flick quartz, vex nymphs. Waltz, bad nymph, for quick jigs vex! Fox nymphs grab quick-jived waltz.</p><p><a href="#">Details</a></p>'
+                        }
+                    }
+                },
+                {
+                    slug: {
+                        de: 'lorem',
+                        en: 'lorem'
+                    },
+                    title: {
+                        de: 'Lorem',
+                        en: 'Lorem'
+                    },
+                    imgSmall: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/251112/Favorites_030.png',
+                    imgBig: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/251112/Favorites_030.png',
+                    content: {
+                        left: {
+                            de: '<p class="spot-color">Lorem</p><p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics.</p><p><a href="#">Todo</a></p>',
+                            en: '<p class="spot-color">Lorem</p><p>The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog. Junk MTV quiz graced by fox whelps. Bawds jog, flick quartz, vex nymphs. Waltz, bad nymph, for quick jigs vex!</p><p><a href="#">Todo</a></p>'
+                        },
+                        right: {
+                            de: '<p class="spot-color">Specs</p><p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics.</p><p><a href="#">Todo</a></p>',
+                            en: '<p class="spot-color">Specs</p><p>The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog. Junk MTV quiz graced by fox whelps. Bawds jog, flick quartz, vex nymphs. Waltz, bad nymph, for quick jigs vex! Fox nymphs grab quick-jived waltz.</p><p><a href="#">Details</a></p>'
+                        }
+                    }
+                },
+                {
+                    slug: {
+                        de: 'ipsum',
+                        en: 'ipsum'
+                    },
+                    title: {
+                        de: 'Ipsum',
+                        en: 'Ipsum'
+                    },
+                    imgSmall: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/251112/Favorites_046.png',
+                    imgBig: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/251112/Favorites_046.png',
+                    content: {
+                        left: {
+                            de: '<p class="spot-color">Ipsum</p><p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics.</p><p><a href="#">Todo</a></p>',
+                            en: '<p class="spot-color">Ipsum</p><p>The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog. Junk MTV quiz graced by fox whelps. Bawds jog, flick quartz, vex nymphs. Waltz, bad nymph, for quick jigs vex!</p><p><a href="#">Todo</a></p>'
+                        },
+                        right: {
+                            de: '<p class="spot-color">Specs</p><p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics.</p><p><a href="#">Todo</a></p>',
+                            en: '<p class="spot-color">Specs</p><p>The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog. Junk MTV quiz graced by fox whelps. Bawds jog, flick quartz, vex nymphs. Waltz, bad nymph, for quick jigs vex! Fox nymphs grab quick-jived waltz.</p><p><a href="#">Details</a></p>'
+                        }
+                    }
+                },
+                {
+                    slug: {
+                        de: 'dolor',
+                        en: 'dolor'
+                    },
+                    title: {
+                        de: 'Dolor',
+                        en: 'Dolor'
+                    },
+                    imgSmall: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/251112/Favorites_047.png',
+                    imgBig: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/251112/Favorites_047.png',
+                    content: {
+                        left: {
+                            de: '<p class="spot-color">Dolor</p><p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics.</p><p><a href="#">Todo</a></p>',
+                            en: '<p class="spot-color">Dolor</p><p>The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog. Junk MTV quiz graced by fox whelps. Bawds jog, flick quartz, vex nymphs. Waltz, bad nymph, for quick jigs vex!</p><p><a href="#">Todo</a></p>'
+                        },
+                        right: {
+                            de: '<p class="spot-color">Specs</p><p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics.</p><p><a href="#">Todo</a></p>',
+                            en: '<p class="spot-color">Specs</p><p>The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog. Junk MTV quiz graced by fox whelps. Bawds jog, flick quartz, vex nymphs. Waltz, bad nymph, for quick jigs vex! Fox nymphs grab quick-jived waltz.</p><p><a href="#">Details</a></p>'
+                        }
+                    }
+                },
+                {
+                    slug: {
+                        de: 'hameggs',
+                        en: 'hameggs'
+                    },
+                    title: {
+                        de: 'Ham & Eggs',
+                        en: 'Ham & Eggs'
+                    },
+                    imgSmall: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/251112/Favorites_050.png',
+                    imgBig: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/251112/Favorites_050.png',
+                    content: {
+                        left: {
+                            de: '<p class="spot-color">Ham & Eggs</p><p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics.</p><p><a href="#">Todo</a></p>',
+                            en: '<p class="spot-color">Ham & Eggs</p><p>The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog. Junk MTV quiz graced by fox whelps. Bawds jog, flick quartz, vex nymphs. Waltz, bad nymph, for quick jigs vex!</p><p><a href="#">Todo</a></p>'
+                        },
+                        right: {
+                            de: '<p class="spot-color">Specs</p><p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics.</p><p><a href="#">Todo</a></p>',
+                            en: '<p class="spot-color">Specs</p><p>The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog. Junk MTV quiz graced by fox whelps. Bawds jog, flick quartz, vex nymphs. Waltz, bad nymph, for quick jigs vex! Fox nymphs grab quick-jived waltz.</p><p><a href="#">Details</a></p>'
+                        }
+                    }
+                }
+            ]
+        };
+    </script>
+</head>
+<body>
+<!--[if lt IE 8]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
+<div id="content">
+    <p>Initializing ReactJS Component.</p>
+</div>
+
+<div id="footer-info">
+    <a class="button"href="https://github.com/sthzg/react-rollerdeck" target="_blank">WIP Code on Github</a>
+</div>
+
+<script>
+    __REACT_DEVTOOLS_GLOBAL_HOOK__ = parent.__REACT_DEVTOOLS_GLOBAL_HOOK__
+</script>
+<script type="text/javascript" src="assets/main.js"></script>
+<script type="text/javascript">
+    window.netSthzgRollerdeck.init({
+        // Dom-ID of container that React will render the component into.
+        'domTargetId': 'content',
+        // Data store with all necessary data to render the component.
+        'rdData': myRollerdeckData.pickerItems,
+        'showStaticNextPrevMenu': true,
+        'language': 'en'
+    });
+</script>
+</body>
+</html>
