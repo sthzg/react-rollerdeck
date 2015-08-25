@@ -16,7 +16,7 @@ var AppCtrl = React.createClass({
                 {
                     (this.props.showStaticNextPrevMenu || this.props.showDynamicNextPrevMenu)
                         ? <NextPrev
-                            pickerItems={this.props.pickerItems}
+                            pickerItems={this.props.rdData.pickerItems}
                             activeIdx={this.getActiveItemIdx()}
                             activeItem={this.getActiveItem()}
                             showStaticNextPrevMenu={this.props.showStaticNextPrevMenu}
@@ -33,13 +33,13 @@ var AppCtrl = React.createClass({
                 }
 
                 <Navigation
-                    pickerItems={this.props.pickerItems}
+                    pickerItems={this.props.rdData.pickerItems}
                     shouldDissolveUnselectedItems={this.props.shouldDissolveUnselectedItems}
                     unselectedItemsDissolveAfter={this.props.unselectedItemsDissolveAfter}
                     language={this.props.language}
                     />
 
-                <Router.RouteHandler pickerItems={this.props.pickerItems} activeIdx={this.getActiveItemIdx()} language={this.props.language} />
+                <Router.RouteHandler rdData={this.props.rdData} activeIdx={this.getActiveItemIdx()} language={this.props.language} />
             </div>
         );
     },
@@ -51,7 +51,7 @@ var AppCtrl = React.createClass({
         let activeIdx = -1;
         if (this.getPath() !== '/') {
             // TODO(sthzg) check if I need polyfill for older browsers to provide forEach.
-            this.props.pickerItems.forEach((item, idx) =>
+            this.props.rdData.pickerItems.forEach((item, idx) =>
                 {
                     if (`/${item.slug[this.props.language]}` === this.getPath()) {
                         activeIdx = idx;
@@ -70,7 +70,7 @@ var AppCtrl = React.createClass({
     getActiveItem() {
         return (this.getActiveItemIdx() === -1)
             ? undefined
-            : this.props.pickerItems[this.getActiveItemIdx()];
+            : this.props.rdData.pickerItems[this.getActiveItemIdx()];
     }
 
 });

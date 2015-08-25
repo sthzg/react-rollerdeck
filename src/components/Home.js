@@ -29,16 +29,10 @@ var Home = React.createClass({
     },
 
     render: function () {
+        let homeHTML = this.props.rdData.home.content[this.props.language];
         return (
-            <div className="net-sthzg-rd-content net-sthzg-rd-home">
-                <p className="spot-color">A Headline About Nothing</p>
-
-                <p>The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog. Junk MTV quiz graced
-                    by fox whelps. Bawds jog, flick quartz, vex nymphs. Waltz, bad nymph, for quick jigs vex! Fox nymphs
-                    grab quick-jived waltz. Brick quiz whangs jumpy veldt fox. Bright vixens jump; dozy fowl quack.</p>
-
-                <p className="citation-source">– Sir Ham van Egg</p>
-            </div>
+            <div className="net-sthzg-rd-content net-sthzg-rd-home"
+                dangerouslySetInnerHTML={{__html: homeHTML}} />
         );
     }
 

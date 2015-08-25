@@ -37,8 +37,8 @@ var Detail = React.createClass({
     },
 
     componentDidUpdate(prevProps, prevState) {
-        let prevItem = prevProps.pickerItems[prevProps.activeIdx];
-        let currentItem = this.props.pickerItems[this.props.activeIdx];
+        let prevItem = prevProps.rdData.pickerItems[prevProps.activeIdx];
+        let currentItem = this.props.rdData.pickerItems[this.props.activeIdx];
 
         if (prevItem.slug[this.props.language] !== currentItem.slug[this.props.language])
         {
@@ -51,7 +51,7 @@ var Detail = React.createClass({
     },
 
     render: function () {
-        let item = this.props.pickerItems[this.props.activeIdx];
+        let item = this.props.rdData.pickerItems[this.props.activeIdx];
         return (
             <div key={this.props.activeIdx} className="net-sthzg-rd-content net-sthzg-rd-detail">
                 <div ref="leftCol" className="net-sthzg-rd-detail-column net-sthzg-rd-detail-column-left"

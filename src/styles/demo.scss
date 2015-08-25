@@ -41,14 +41,15 @@ a, a:visited, a:active, a:hover, a:focus {
 
 
 #footer-info {
-    position: absolute;
-    bottom: 14px;
-    background: $net-sthzg-rd-color-background;
+    position: fixed;
+    bottom: 0;
     left: 0;
-    padding-top: 8px;
+    padding-top: 6px;
+    padding-bottom: 6px;
     padding-left: 36px;
-    border-top: 1px dashed rgb(200,200,200);
     width: 100%;
+    border-top: 1px dashed rgb(200,200,200);
+    background: $net-sthzg-rd-color-background;
 }
 
 body {
@@ -58,6 +59,7 @@ body {
     color: rgb(120,120,120);
     font-family: monospace, Helvetica Neue, Helvetica, Arial, sans-serif;
     text-rendering: optimizeLegibility;
+    padding-bottom: 60px;
 }
 
 a {

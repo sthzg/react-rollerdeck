@@ -40,7 +40,7 @@ window.netSthzgRollerdeck = {
         Router.run(Routes, (Root) => {
             React.render(
                 <Root
-                    pickerItems={rdData}
+                    rdData={rdData}
                     showStaticNextPrevMenu={showStaticNextPrevMenu}
                     shouldDissolveUnselectedItems={shouldDissolveUnselectedItems}
                     unselectedItemsDissolveAfter={unselectedItemsDissolveAfter}
