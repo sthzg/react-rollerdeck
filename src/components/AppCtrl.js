@@ -34,7 +34,6 @@ var AppCtrl = React.createClass({
 
                 <Navigation
                     pickerItems={this.props.pickerItems}
-                    onPickerItemSelect={this._handlePickerItemSelection}
                     shouldDissolveUnselectedItems={this.props.shouldDissolveUnselectedItems}
                     unselectedItemsDissolveAfter={this.props.unselectedItemsDissolveAfter}
                     language={this.props.language}

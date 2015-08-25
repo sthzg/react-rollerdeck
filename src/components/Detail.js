@@ -13,12 +13,15 @@ var Detail = React.createClass({
             let leftCol = component.refs.leftCol.getDOMNode();
             let rightCol = component.refs.rightCol.getDOMNode();
 
+            TweenLite.killTweensOf(rightCol);
+            TweenLite.killTweensOf(leftCol);
+
             TweenLite.to(rightCol, 0.2, {x: '-32', opacity: 0});
             TweenLite.to(leftCol, 0.2,
                 {
                     x: '-32',
                     opacity: 0,
-                    delay: 0.15,
+                    delay: 0.25,
                     onComplete: () => { callback(); }
                 }
             );

@@ -81,6 +81,14 @@ body {
             margin-bottom: .8em;
         }
 
+        img, span {
+            pointer-events: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
         &.net-sthzg-rd-transition {
             transition: $net-sthzg-rd-navigation-item-transition;
             -webkit-transition: $net-sthzg-rd-navigation-item-transition;
