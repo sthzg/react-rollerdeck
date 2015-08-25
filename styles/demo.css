@@ -29,21 +29,23 @@ a, a:visited, a:active, a:hover, a:focus {
     background: white; }
 
 #footer-info {
-  position: absolute;
-  bottom: 14px;
-  background: #f4ece2;
+  position: fixed;
+  bottom: 0;
   left: 0;
-  padding-top: 8px;
+  padding-top: 6px;
+  padding-bottom: 6px;
   padding-left: 36px;
+  width: 100%;
   border-top: 1px dashed #c8c8c8;
-  width: 100%; }
+  background: #f4ece2; }
 
 body {
   margin-top: 100px;
   font-size: 14px;
   color: #787878;
   font-family: monospace, Helvetica Neue, Helvetica, Arial, sans-serif;
-  text-rendering: optimizeLegibility; }
+  text-rendering: optimizeLegibility;
+  padding-bottom: 60px; }
 
 a {
   color: #3b5c85;
