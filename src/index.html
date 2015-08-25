@@ -170,14 +170,17 @@
 </script>
 <script type="text/javascript" src="assets/main.js"></script>
 <script type="text/javascript">
-    window.netSthzgRollerdeck.init({
+    var options = {
         // Dom-ID of container that React will render the component into.
         'domTargetId': 'content',
         // Data store with all necessary data to render the component.
         'rdData': myRollerdeckData,
+        // Configures whether to show the next/prev/collapse menu bar on a detail route.
         'showStaticNextPrevMenu': true,
+        // Set the language to display content.
         'language': 'en'
-    });
+    };
+    window.netSthzgRollerdeck.init(options);
 </script>
 </body>
 </html>

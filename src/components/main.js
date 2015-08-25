@@ -10,9 +10,11 @@ var Route = Router.Route;
 
 // TODO(sthzg) make nice
 window.netSthzgRollerdeck = {
-    init: (options) => {
+    _rdApp: null,
+    _domTargetId: null,
 
-        let domTargetId = options.domTargetId || 'content';
+    init(options) {
+        this._domTargetId = options.domTargetId || 'content';
         let rdData = options.rdData;
         let showStaticNextPrevMenu = options.showStaticNextPrevMenu || false;
         let shouldDissolveUnselectedItems = options.shouldDissolveUnselectedItems || false;
@@ -26,7 +28,7 @@ window.netSthzgRollerdeck = {
         let showLabelCollapse = options.showLabelCollapse || true;
         let lang = options.language;
 
-        var content = document.getElementById(domTargetId);
+        var content = document.getElementById(this.getDOMTargetId());
 
         var Routes = (
             <Route handler={ReactRollerdeckApp}>
@@ -36,8 +38,7 @@ window.netSthzgRollerdeck = {
                 </Route>
             </Route>
         );
-
-        Router.run(Routes, (Root) => {
+        this._rdApp = Router.run(Routes, (Root) => {
             React.render(
                 <Root
                     rdData={rdData}
@@ -56,5 +57,18 @@ window.netSthzgRollerdeck = {
                 content
             );
         });
+    },
+
+    getApp() {
+        return this._rdApp;
+    },
+
+    getDOMTargetId() {
+        return this._domTargetId;
+    },
+
+    destroy() {
+        this.getApp().clearAllRoutes();
+        React.unmountComponentAtNode(document.getElementById(this.getDOMTargetId()));
     }
 };
