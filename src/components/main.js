@@ -27,10 +27,11 @@ window.netSthzgRollerdeck = {
         let showLabelPrevious = options.showLabelPrevious || true;
         let showLabelCollapse = options.showLabelCollapse || true;
         let lang = options.language;
+        let locationType = options.locationType || 'HashLocation';
 
-        var content = document.getElementById(this.getDOMTargetId());
+        let content = document.getElementById(this.getDOMTargetId());
 
-        var Routes = (
+        let Routes = (
             <Route handler={ReactRollerdeckApp}>
                 <Route path="/" name="/" handler={AppCtrl}>
                     <Route path="/" handler={Home}/>
@@ -38,7 +39,8 @@ window.netSthzgRollerdeck = {
                 </Route>
             </Route>
         );
-        this._rdApp = Router.run(Routes, (Root) => {
+
+        this._rdApp = Router.run(Routes, Router[locationType], (Root) => {
             React.render(
                 <Root
                     rdData={rdData}
@@ -68,7 +70,8 @@ window.netSthzgRollerdeck = {
     },
 
     destroy() {
-        this.getApp().clearAllRoutes();
+        this.getApp().stop();
         React.unmountComponentAtNode(document.getElementById(this.getDOMTargetId()));
     }
+
 };
