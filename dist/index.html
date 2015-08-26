@@ -158,7 +158,7 @@
     your browser</a> to improve your experience.</p>
 <![endif]-->
 <div id="content">
-    <p>Initializing ReactJS Component.</p>
+    <p style="text-align: center">Initializing ReactJS Component.</p>
 </div>
 
 <div id="footer-info">
@@ -176,9 +176,15 @@
         // Data store with all necessary data to render the component.
         'rdData': myRollerdeckData,
         // Configures whether to show the next/prev/collapse menu bar on a detail route.
-        'showStaticNextPrevMenu': true,
+        'showStaticNextPrevMenu': false,
+        // Configures whether to show the next/prev/collapse menu bar on a detail route.
+        'showDynamicNextPrevMenu': true,
+        // Configures whether unselected items on a detail route dissolve.
+        'shouldDissolveUnselectedItems': true,
         // Set the language to display content.
-        'language': 'en'
+        'language': 'en',
+        // Set the preferred Location type (currently HistoryLocation or HashLocation)
+        'locationType': 'HashLocation'
     };
     window.netSthzgRollerdeck.init(options);
 </script>

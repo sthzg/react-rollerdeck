@@ -21,6 +21,8 @@ var AppCtrl = React.createClass({
                             activeItem={this.getActiveItem()}
                             showStaticNextPrevMenu={this.props.showStaticNextPrevMenu}
                             showDynamicNextPrevMenu={this.props.showDynamicNextPrevMenu}
+                            shouldDissolveUnselectedItems={this.props.shouldDissolveUnselectedItems}
+                            unselectedItemsDissolveAfter={this.props.unselectedItemsDissolveAfter}
                             labelNext={this.props.labelNext}
                             labelPrevious={this.props.labelPrevious}
                             labelCollapse={this.props.labelCollapse}
@@ -36,6 +38,7 @@ var AppCtrl = React.createClass({
                     pickerItems={this.props.rdData.pickerItems}
                     shouldDissolveUnselectedItems={this.props.shouldDissolveUnselectedItems}
                     unselectedItemsDissolveAfter={this.props.unselectedItemsDissolveAfter}
+                    shouldRevealDissolvedItemsOnContainerHover={this.props.shouldRevealDissolvedItemsOnContainerHover}
                     language={this.props.language}
                     />
 

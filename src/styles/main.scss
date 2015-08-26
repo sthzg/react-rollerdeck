@@ -46,106 +46,107 @@ body {
     position: absolute;
     left: 0;
     right: 0;
-}
 
-.net-sthzg-rd-navigation {
-    position: relative;
-    margin-left: -100em;
-    margin-right: -100em;
-    text-align: center;
-    transition: $net-sthzg-rd-navigation-transition;
-    -webkit-transition: $net-sthzg-rd-navigation-transition;
-    -moz-transition: $net-sthzg-rd-navigation-transition;
+    .net-sthzg-rd-navigation {
+        position: relative;
+        margin-left: -100em;
+        margin-right: -100em;
+        text-align: center;
+        transition: $net-sthzg-rd-navigation-transition;
+        -webkit-transition: $net-sthzg-rd-navigation-transition;
+        -moz-transition: $net-sthzg-rd-navigation-transition;
 
-    .net-sthzg-rd-navigation-item {
-        -webkit-backface-visibility: hidden;
-        -moz-backface-visibility: hidden;
-        backface-visibility: hidden;
-    }
-
-    .net-sthzg-rd-navigation-item {
-        display: inline-block;
-        vertical-align: top;
-        margin: $net-sthzg-rd-navigation-item-margin;
-        transition: $net-sthzg-rd-navigation-item-transition;
-        -webkit-transition: $net-sthzg-rd-navigation-item-transition;
-        -moz-transition: $net-sthzg-rd-navigation-item-transition;
-        -webkit-transform: translateZ(0) scale(1.0, 1.0);
-
-        a, img {
-            display: block;
-            margin: auto;
+        .net-sthzg-rd-navigation-item {
+            -webkit-backface-visibility: hidden;
+            -moz-backface-visibility: hidden;
+            backface-visibility: hidden;
         }
 
-        img {
-            margin-bottom: .8em;
-        }
-
-        img, span {
-            pointer-events: none;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-        }
-
-        &.net-sthzg-rd-transition {
+        .net-sthzg-rd-navigation-item {
+            display: inline-block;
+            vertical-align: top;
+            margin: $net-sthzg-rd-navigation-item-margin;
             transition: $net-sthzg-rd-navigation-item-transition;
             -webkit-transition: $net-sthzg-rd-navigation-item-transition;
             -moz-transition: $net-sthzg-rd-navigation-item-transition;
-        }
+            -webkit-transform: translateZ(0) scale(1.0, 1.0);
 
-        &.net-sthzg-rd-navigation-item-active {
-            pointer-events: none;
-            transform: translateY($net-sthzg-rd-navigation-item-translateY);
-            -moz-transform: translateY($net-sthzg-rd-navigation-item-translateY);
-            -webkit-transform: translateY($net-sthzg-rd-navigation-item-translateY) translateZ(0);
+            a, img {
+                display: block;
+                margin: auto;
+            }
 
-            &:hover {
+            img {
+                margin-bottom: .8em;
+            }
+
+            img, span {
+                pointer-events: none;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+            }
+
+            &.net-sthzg-rd-transition {
+                transition: $net-sthzg-rd-navigation-item-transition;
+                -webkit-transition: $net-sthzg-rd-navigation-item-transition;
+                -moz-transition: $net-sthzg-rd-navigation-item-transition;
+            }
+
+            &.net-sthzg-rd-navigation-item-active {
+                pointer-events: none;
                 transform: translateY($net-sthzg-rd-navigation-item-translateY);
                 -moz-transform: translateY($net-sthzg-rd-navigation-item-translateY);
-                -webkit-transform: translateY($net-sthzg-rd-navigation-item-translateY) ;
+                -webkit-transform: translateY($net-sthzg-rd-navigation-item-translateY) translateZ(0);
+
+                &:hover {
+                    transform: translateY($net-sthzg-rd-navigation-item-translateY);
+                    -moz-transform: translateY($net-sthzg-rd-navigation-item-translateY);
+                    -webkit-transform: translateY($net-sthzg-rd-navigation-item-translateY);
+                }
             }
-        }
 
-        &.net-sthzg-rd-navigation-item-inactive {
-            opacity: .5;
+            &.net-sthzg-rd-navigation-item-inactive {
+                opacity: .5;
 
-            &:hover {
-                opacity: 1;
+                &:hover {
+                    opacity: 1;
+                }
             }
-        }
 
-        &.net-sthzg-rd-navigation-item-dissolved {
-            opacity: 0;
-            cursor: default;
-            -webkit-pointer-events: none;
-            -moz-pointer-events: none;
-            pointer-events: none;
-
-            &:hover {
+            &.net-sthzg-rd-navigation-item-dissolved {
                 opacity: 0;
                 cursor: default;
                 -webkit-pointer-events: none;
                 -moz-pointer-events: none;
                 pointer-events: none;
+
+                &:hover {
+                    opacity: 0;
+                    cursor: default;
+                    -webkit-pointer-events: none;
+                    -moz-pointer-events: none;
+                    pointer-events: none;
+                }
+            }
+
+            &:hover {
+                cursor: pointer;
+                transform: scale(1.33, 1.33) translateZ(0);
+                -moz-transform: scale(1.33, 1.33);
+                -webkit-transform: scale(1.33, 1.33) translateZ(0);
             }
         }
 
-        &:hover {
-            cursor: pointer;
-            transform: scale(1.33, 1.33) translateZ(0);
-            -moz-transform: scale(1.33, 1.33);
-            -webkit-transform: scale(1.33, 1.33) translateZ(0);
-        }
-    }
-
-    &.net-sthzg-rd-navigation-none-selected {
-        .net-sthzg-rd-navigation-item-inactive {
-            opacity: 1;
+        &.net-sthzg-rd-navigation-none-selected {
+            .net-sthzg-rd-navigation-item-inactive {
+                opacity: 1;
+            }
         }
     }
 }
+
 
 .net-sthzg-rd-content {
     position: relative;

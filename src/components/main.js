@@ -18,7 +18,8 @@ window.netSthzgRollerdeck = {
         let rdData = options.rdData;
         let showStaticNextPrevMenu = options.showStaticNextPrevMenu || false;
         let shouldDissolveUnselectedItems = options.shouldDissolveUnselectedItems || false;
-        let unselectedItemsDissolveAfter = options.unselectedItemsDissolveAfter || undefined;
+        let shouldRevealDissolvedItemsOnContainerHover = options.shouldRevealDissolvedItemsOnContainerHover || false;
+        let unselectedItemsDissolveAfter = options.unselectedItemsDissolveAfter || 1500;
         let showDynamicNextPrevMenu = options.showDynamicNextPrevMenu || false;
         let labelNext = options.labelNext || 'Next ❯';
         let labelPrevious = options.labelPrevious || '❮ Previous';
@@ -34,7 +35,7 @@ window.netSthzgRollerdeck = {
         let Routes = (
             <Route handler={ReactRollerdeckApp}>
                 <Route path="/" name="/" handler={AppCtrl}>
-                    <Route path="/" handler={Home}/>
+                    <Route path="/" name="home" handler={Home}/>
                     <Route path="/:slug" name="detail" handler={Detail}/>
                 </Route>
             </Route>
@@ -46,6 +47,7 @@ window.netSthzgRollerdeck = {
                     rdData={rdData}
                     showStaticNextPrevMenu={showStaticNextPrevMenu}
                     shouldDissolveUnselectedItems={shouldDissolveUnselectedItems}
+                    shouldRevealDissolvedItemsOnContainerHover={shouldRevealDissolvedItemsOnContainerHover}
                     unselectedItemsDissolveAfter={unselectedItemsDissolveAfter}
                     showDynamicNextPrevMenu={showDynamicNextPrevMenu}
                     labelNext={labelNext}

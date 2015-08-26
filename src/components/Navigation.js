@@ -64,12 +64,26 @@ var Navigation = React.createClass({
         );
 
         return (
-            <div className="net-sthzg-rd-navigation-wrap">
+            <div className="net-sthzg-rd-navigation-wrap" onMouseEnter={this._handleMouseEnter} onMouseLeave={this._handleMouseLeave}>
                 <div ref="net-sthzg-rd-navigation" className={componentClasses}>
                     {navLinks}
                 </div>
             </div>
         );
+    },
+
+    _handleMouseEnter() {
+        let routeName = this.getRoutes()[this.getRoutes().length - 1].name;
+        if (routeName === 'detail' && this.props.shouldRevealDissolvedItemsOnContainerHover) {
+            this._revealAllNavigationItems();
+        }
+    },
+
+    _handleMouseLeave() {
+        let routeName = this.getRoutes()[this.getRoutes().length - 1].name;
+        if (routeName === 'detail' && this.props.shouldRevealDissolvedItemsOnContainerHover) {
+            this._dissolveAllUnselectedNavigationItems();
+        }
     },
 
     /**
@@ -146,6 +160,7 @@ var Navigation = React.createClass({
     },
 
     _revealAllNavigationItems() {
+        this._clearAllNavigationItemDissolveIntervals();
         this.props.pickerItems.forEach((item, idx) => {
             // TODO(sthzg) needs polyfill for classList.
             this.refs[`nav-item-${idx}`].getDOMNode().classList.remove('net-sthzg-rd-navigation-item-dissolved');
