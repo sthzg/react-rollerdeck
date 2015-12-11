@@ -33,7 +33,7 @@ var Navigation = React.createClass({
         let lang = this.props.language;
 
         // Prepare links to the Rollerdeck's detail pages.
-        let navLinks = this.props.pickerItems.map(function(item, idx) {
+        let navLinks = this.props.pickerItems.map(function (item, idx) {
             let isActive = (this.getPath() === `/${item.slug[lang]}`);
             let classes = classNames(
                 'net-sthzg-rd-navigation-item',
@@ -50,7 +50,7 @@ var Navigation = React.createClass({
             return (
                 <div ref={`nav-item-${idx}`} key={idx} className={classes}>
                     <Router.Link to="detail" params={{slug: item.slug[lang]}}>
-                        <img src={item.imgSmall} width={(isActive) ? 96 : 32} />
+                        <img src={item.imgSmall} width={(isActive) ? 96 : 32}/>
                         {(!isActive) ? item.title[lang] : null}
                     </Router.Link>
                 </div>
@@ -64,7 +64,8 @@ var Navigation = React.createClass({
         );
 
         return (
-            <div className="net-sthzg-rd-navigation-wrap" onMouseEnter={this._handleMouseEnter} onMouseLeave={this._handleMouseLeave}>
+            <div className="net-sthzg-rd-navigation-wrap" onMouseEnter={this._handleMouseEnter}
+                 onMouseLeave={this._handleMouseLeave}>
                 <div ref="net-sthzg-rd-navigation" className={componentClasses}>
                     {navLinks}
                 </div>
@@ -142,14 +143,12 @@ var Navigation = React.createClass({
         let initialDelay = this.props.unselectedItemsDissolveAfter || 2500;
         let delay = 96;
 
-        this.props.pickerItems.forEach((item, idx) =>
-        {
+        this.props.pickerItems.forEach((item, idx) => {
             if (idx === this._rdData.activeIdx) {
                 return false;
             }
 
-            let to = setTimeout(() =>
-                {
+            let to = setTimeout(() => {
                     // TODO(sthzg) needs polyfill for classList.
                     this.refs[`nav-item-${idx}`].getDOMNode().classList.add('net-sthzg-rd-navigation-item-dissolved');
                 },
@@ -173,7 +172,9 @@ var Navigation = React.createClass({
 
     _clearAllNavigationItemDissolveIntervals() {
         // TODO(sthzg) needs polyfill for forEach.
-        this._rdData.navigationItemsDissolveInt.forEach((val) => { clearTimeout(val); });
+        this._rdData.navigationItemsDissolveInt.forEach((val) => {
+            clearTimeout(val);
+        });
         this._rdData.navigationItemsDissolveInt = [];
     }
 

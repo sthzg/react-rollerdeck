@@ -34,9 +34,9 @@ window.netSthzgRollerdeck = {
 
         let Routes = (
             <Route handler={ReactRollerdeckApp}>
-                <Route path="/" name="/" handler={AppCtrl}>
-                    <Route path="/" name="home" handler={Home}/>
-                    <Route path="/:slug" name="detail" handler={Detail}/>
+                <Route path="/" name="/" handler={AppCtrl} ignoreScrollBehavior>
+                    <Route path="/" name="home" handler={Home} ignoreScrollBehavior />
+                    <Route path="/:slug" name="detail" handler={Detail} ignoreScrollBehavior />
                 </Route>
             </Route>
         );
