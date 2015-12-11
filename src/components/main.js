@@ -29,6 +29,8 @@ window.netSthzgRollerdeck = {
         let showLabelCollapse = options.showLabelCollapse || true;
         let lang = options.language;
         let locationType = options.locationType || 'HashLocation';
+        let smallImgWidth = options.smallImgWidth || 32;
+        let largeImgWidth = options.largeImgWidth || 96;
 
         let content = document.getElementById(this.getDOMTargetId());
 
@@ -45,6 +47,8 @@ window.netSthzgRollerdeck = {
             React.render(
                 <Root
                     rdData={rdData}
+                    smallImgWidth={smallImgWidth}
+                    largeImgWidth={largeImgWidth}
                     showStaticNextPrevMenu={showStaticNextPrevMenu}
                     shouldDissolveUnselectedItems={shouldDissolveUnselectedItems}
                     shouldRevealDissolvedItemsOnContainerHover={shouldRevealDissolvedItemsOnContainerHover}

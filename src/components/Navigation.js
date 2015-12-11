@@ -50,9 +50,11 @@ var Navigation = React.createClass({
             return (
                 <div ref={`nav-item-${idx}`} key={idx} className={classes}>
                     <Router.Link to="detail" params={{slug: item.slug[lang]}}>
-                        <img src={item.imgSmall} width={(isActive) ? 96 : 32}/>
-                        {(!isActive) ? item.title[lang] : null}
+                        <img src={item.imgSmall} width={(isActive)
+                            ? this.props.largeImgWidth
+                            : this.props.smallImgWidth} />
                     </Router.Link>
+                    {(!isActive) ? item.title[lang] : null}
                 </div>
             );
 

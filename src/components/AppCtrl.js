@@ -40,6 +40,8 @@ var AppCtrl = React.createClass({
                     unselectedItemsDissolveAfter={this.props.unselectedItemsDissolveAfter}
                     shouldRevealDissolvedItemsOnContainerHover={this.props.shouldRevealDissolvedItemsOnContainerHover}
                     language={this.props.language}
+                    smallImgWidth={this.props.smallImgWidth}
+                    largeImgWidth={this.props.largeImgWidth}
                     />
 
                 <Router.RouteHandler rdData={this.props.rdData} activeIdx={this.getActiveItemIdx()} language={this.props.language} />
